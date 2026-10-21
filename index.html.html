@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIOCHAR-MENA | Better Soil. Greener Future.</title>
+  <style>
+    :root {
+      --primary: #1e3d2f;
+      --accent: #2e7d32;
+      --accent-light: #e8f5e9;
+      --text: #2c3e50;
+      --text-muted: #596978;
+      --bg-light: #f8faf8;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+
+    /* Header & Nav */
+    header { position: sticky; top: 0; background: var(--white); border-bottom: 1px solid var(--border); z-index: 1000; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    .logo-img { height: 50px; width: auto; object-fit: contain; }
+    nav ul { display: flex; list-style: none; gap: 2rem; align-items: center; }
+    nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: var(--accent); }
+    .btn-primary { background: var(--accent); color: var(--white); padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    .btn-primary:hover { background: #236326; }
+
+    /* Hero Section */
+    .hero { background: linear-gradient(135deg, #1e3d2f 0%, #11261d 100%); color: var(--white); padding: 5rem 2rem; text-align: center; }
+    .hero-content { max-width: 800px; margin: 0 auto; }
+    .hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 1.2rem; line-height: 1.2; }
+    .hero p { font-size: 1.25rem; color: #a3c2b2; margin-bottom: 2rem; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-secondary { background: transparent; color: var(--white); border: 2px solid #a3c2b2; padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 600; text-decoration: none; }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); }
+
+    /* Sections */
+    section { padding: 4.5rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-title { font-size: 2rem; color: var(--primary); margin-bottom: 1rem; text-align: center; }
+    .section-subtitle { text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem; }
+
+    /* Cards & Grids */
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .card { background: var(--bg-light); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .card h3 { color: var(--primary); margin-bottom: 0.8rem; font-size: 1.3rem; }
+
+    /* Tech Highlight Box */
+    .tech-box { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 1.5rem; border-radius: 4px; margin-top: 1.5rem; }
+    .tech-box h4 { color: var(--accent); font-size: 1.1rem; margin-bottom: 0.4rem; }
+
+    /* Process Timeline */
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; position: relative; }
+    .step-card { background: var(--white); border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: var(--shadow); }
+    .step-num { width: 40px; height: 40px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 1rem; }
+
+    /* Status List */
+    .status-list { list-style: none; }
+    .status-item { display: flex; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid var(--border); }
+    .status-badge { background: var(--accent-light); color: var(--accent); padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600; }
+
+    /* Contact Section */
+    .contact-section { background: var(--primary); color: var(--white); text-align: center; padding: 4rem 2rem; border-radius: 12px; margin-top: 2rem; }
+    .contact-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .contact-section p { color: #a3c2b2; margin-bottom: 2rem; font-size: 1.1rem; }
+    .email-link { color: #81c784; font-weight: 700; text-decoration: none; font-size: 1.2rem; }
+    .email-link:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9rem; margin-top: 3rem; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <img src="LOGO-REV2-07212026.png" alt="BIOCHAR-MENA Logo" class="logo-img">
+      <nav>
+        <ul>
+          <li><a href="#why-biochar">Why Biochar</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#who-we-serve">Who We Serve</a></li>
+          <li><a href="#status">Where We Are</a></li>
+          <li><a href="#contact" class="btn-primary">Talk to Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Turn Your Farm Waste Into Better Soil</h1>
+      <p>From the prunings and residues you already have. We make it happen, end to end.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get a Free Consultation</a>
+        <a href="#how-it-works" class="btn-secondary">See How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Offer -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Your Soil is Your Biggest Asset</h2>
+      <p class="section-subtitle">Biochar helps it need less fertilizer, hold more water, and resist erosion. Here is what we offer.</p>
+      
+      <div class="grid-2">
+        <div class="card">
+          <h3>Raw Biochar</h3>
+          <p>Made from crop residues and sold in 25 kg and 50 kg sacks. Pricing depends on quantity, so a home gardener, a nursery, and a large farm each get a fair quote.</p>
+        </div>
+        <div class="card">
+          <h3>Free Consultancy</h3>
+          <p>We show you how to charge the biochar with the fertilizer you already use, and how to work out the savings on your own land.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Biochar -->
+  <section id="why-biochar" style="background: var(--bg-light);">
+    <div class="container">
+      <h2 class="section-title">Why Biochar?</h2>
+      <p class="section-subtitle">Biochar is a stable, carbon-rich product made by heating crop residues without oxygen, then returning it to your land. On the farm, it delivers measurable impact.</p>
+      
+      <div class="grid-3">
+        <div class="card">
+          <h3>Spend Less on Fertilizer</h3>
+          <p>It holds nutrients in the root zone, so less of what you buy washes away in irrigation or rain.</p>
+          <div class="tech-box">
+            <h4>Fertilizer Efficiency Ratio (FER)</h4>
+            <p style="font-size: 0.9rem;">Measures how much applied fertilizer is actually used by crops. Charged biochar raises FER significantly, drastically cutting wasted input costs.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Keep Water Where Roots Need It</h3>
+          <p>Works like a microscopic sponge, holding vital water in root zone soils to carry crops through dry spells on reduced irrigation.</p>
+          <div class="tech-box">
+            <h4>Cation Exchange Capacity (CEC)</h4>
+            <p style="font-size: 0.9rem;">Boosts soil's overall capacity to retain nutrients against runoff and release them steadily over time.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Build Stronger, Living Soil</h3>
+          <p>High fixed carbon content (75% – 90%) improves soil structure, fosters beneficial microbial habitat, and limits topsoil erosion.</p>
+          <div class="tech-box">
+            <h4>Long-Term Carbon Sequestration</h4>
+            <p style="font-size: 0.9rem;">Locks atmospheric carbon into stable soil structures permanently as production scales up across agricultural land.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">From Your Prunings Back to Your Soil</h2>
+      <p class="section-subtitle">A simple 4-step closed loop for your farm.</p>
+
+      <div class="process-steps">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>You Bring Residues</h3>
+          <p>Vine prunings, orchard cuttings, and other crop residues you already have.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>We Make Biochar</h3>
+          <p>Our imported pyrolysis plant heats them without oxygen, turning waste into stable carbon.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>We Charge It</h3>
+          <p>We help you soak the biochar with your current fertilizer so nutrients are held, not lost.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <h3>You Feed Your Soil</h3>
+          <p>The biochar goes back to your land and keeps working season after season.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 3rem; text-align: center; background: var(--bg-light); padding: 2rem; border-radius: 8px;">
+        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Two Ways to Get Your Biochar</h3>
+        <p><strong>1. Bring & Collect:</strong> Bring your residues to our facility and pick up your processed biochar.</p>
+        <p><strong>2. Direct Delivery:</strong> We deliver prepared biochar straight to your farm or estate.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section id="who-we-serve" style="background: var(--bg-light);">
+    <div class="container">
+      <h2 class="section-title">Who We Serve</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Farms & Vineyards</h3>
+          <p>Direct supply accompanied by custom consulting on your specific fertilizer program and soil profile.</p>
+        </div>
+        <div class="card">
+          <h3>Food & Dairy Producers</h3>
+          <p>Ideal for agricultural setups and commercial enterprises cultivating land and managing organic residues.</p>
+        </div>
+        <div class="card">
+          <h3>Nurseries</h3>
+          <p>Bulk and tailored packaging designed for commercial plant propagation and potted media mixing.</p>
+        </div>
+        <div class="card">
+          <h3>Home Gardeners & Hobbyists</h3>
+          <p>Convenient sack sizes for soil enrichment across small plots, orchards, and private estates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where We Are Today -->
+  <section id="status">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="section-title">Where We Are Today</h2>
+      <ul class="status-list">
+        <li class="status-item">
+          <span><strong>Market Focus:</strong></span>
+          <span>Lebanon first, expanding to the wider MENA region</span>
+        </li>
+        <li class="status-item">
+          <span><strong>Company Registration:</strong></span>
+          <span class="status-badge">Under Registration</span>
+        </li>
+        <li class="status-item">
+          <span><strong>Organic Certification:</strong></span>
+          <span class="status-badge">In Progress</span>
+        </li>
+        <li class="status-item">
+          <span><strong>Carbon-Credit Registration:</strong></span>
+          <span class="status-badge">In Progress</span>
+        </li>
+        <li class="status-item">
+          <span><strong>Laboratory Validation Partners:</strong></span>
+          <span>Collaborating with LARI, LAU, and AUB</span>
+        </li>
+      </ul>
+
+      <div style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--text-muted);">
+        * Detailed technical data sheets, elemental analyses, and laboratory testing reports are shared on request.
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <div class="contact-section">
+      <h2>Tell Us About Your Land</h2>
+      <p>Send us your crop type, total surface area, and current fertilizer usage. We will revert with a free assessment of what biochar can do for your soil.<br>We are lining up our initial field trials across Lebanon—now is the ideal time to talk.</p>
+      
+      <p style="margin-bottom: 0.5rem; font-size: 1.1rem; color: #fff;"><strong>Tawfik Bahri</strong> | General Manager</p>
+      <p><a href="mailto:tnbahri@biocharmena.com" class="email-link">tnbahri@biocharmena.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>BIOCHAR MENA</strong> (under registration)</p>
+    <p>Better Soil. Greener Future.</p>
+  </footer>
+
+</body>
+</html>
